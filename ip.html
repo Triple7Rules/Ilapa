@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<h1>V1.13</h1><br><h2>Jquery  = True<br>Php = False<br>
+
+    <meta charset="utf-8" />
+
+    <title></title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+
+        var ipinfo;
+
+        $.getJSON("http://ipinfo.io", function (data) {
+            alert(data.ip)
+            $("#info").html("City: " + data.city + " ,County: " + data.country + " ,IP: " + data.ip + " ,Location: " + data.loc + " ,Organisation: " + data.org + " ,Postal Code: " + data.postal + " ,Region: " + data.region + "")
+
+        })
+
+    </script>
+
+</head>
+
+<body>
+
+    <p>Info</p>
+
+    <p id="info"></p>
+
+</body>
+
+</html>
